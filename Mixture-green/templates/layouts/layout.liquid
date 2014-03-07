@@ -1,0 +1,160 @@
+<!doctype html>
+<html lang="en">
+   <!--This is the main layout file for the entire project
+   The layout file includes the documentation for the majority of the css
+   as well as including content blocks-->
+   
+   <!--Note that comments are not allowed in the templates folder files (ie index.liquid and model.liquid)-->
+
+   <!--The "template" directory includes the pages (index, model files); the "includes" dir includes the various content blocks such as nav bars"-->
+
+   <!--Save the .liquid file as the desired end url: "testpage.liquid" becomes "/testpage" and adjust the nav
+   file accordingly-->
+
+   <!--The Model directory includes the json files for handlebars etc-->
+
+   <!--http://andrewxhill.com/cartodb-examples/scroll-story/pluto/index.html#11-->
+
+
+    <head>
+        <meta charset="utf-8">
+        <title>{% block title %}Mixture + Bootstrap{% endblock %}</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        {{ "bootstrap.css" | asset_url | stylesheet_tag }}
+        {{ "portfolioCss/layout.css" | asset_url | stylesheet_tag }}
+        {{ "portfolioCss/normalize.css" | asset_url | stylesheet_tag }}
+   
+        <style>
+            body {
+                padding-top: 50px;
+                color: blue; 
+            }
+            .starter-template {
+                padding: 40px 15px;
+            }
+
+            h1 {
+              color: gray;
+              font-size: 42px;
+            }
+
+            h2 {
+              color: green;
+              font-size: 32px;
+            }
+            .myimg {
+              width: 280px;
+              height: 200px;    
+            }
+
+            .soup {
+              text-align: center;
+              vertical-align: middle;
+              padding-top: 7px;
+
+            }
+
+ /**-- Taken from http://listjs.com/examples **/
+
+            .list {
+  font-family:sans-serif;
+  margin:0;
+  padding:20px 0 0;
+}
+.list > li {
+  display:block;
+  background-color: #eee;
+  padding:10px;
+  box-shadow: inset 0 1px 0 #fff;
+}
+.avatar {
+  max-width: 150px;
+}
+img {
+  max-width: 100%;
+}
+h3 {
+  font-size: 16px;
+  margin:0 0 0.3rem;
+  font-weight: normal;
+  font-weight:bold;
+}
+p {
+  margin:0;
+}
+
+input {
+  border:solid 1px #ccc;
+  border-radius: 5px;
+  padding:7px 14px;
+  margin-bottom:10px
+}
+input:focus {
+  outline:none;
+  border-color:#aaa;
+}
+.sort {
+  padding:8px 30px;
+  border-radius: 6px;
+  border:none;
+  display:inline-block;
+  color:#fff;
+  text-decoration: none;
+  background-color: #28a8e0;
+  height:30px;
+}
+.sort:hover {
+  text-decoration: none;
+  background-color:#1b8aba;
+}
+.sort:focus {
+  outline:none;
+}
+.sort:after {
+  width: 0;
+  height: 0;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-bottom: 5px solid transparent;
+  content:"";
+  position: relative;
+  top:-10px;
+  right:-5px;
+}
+.sort.asc:after {
+  width: 0;
+  height: 0;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-top: 5px solid #fff;
+  content:"";
+  position: relative;
+  top:13px;
+  right:-5px;
+}
+.sort.desc:after {
+  width: 0;
+  height: 0;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-bottom: 5px solid #fff;
+  content:"";
+  position: relative;
+  top:-10px;
+  right:-5px;
+}
+        </style>
+        <!-- TODO: Complete this project :) -->
+    </head>
+    <body>
+        {% include "navigation" %}
+        <div class="container">
+            {% block content %}{% endblock %}
+        </div>
+        <!--script src="//code.jquery.com/jquery.min.js"></script-->
+        {{ "bootstrap.js" | asset_url | script_tag }}
+        {{ "portfolioJs/jquery.main.min.js" | asset_url | script_tag }}
+        {{ "portfolioJs/jquery.easing.min.js" | asset_url | script_tag }}
+        {{ "portfolioJs/jquery.mixitup.min.js" | asset_url | script_tag }}
+    </body>
+</html>

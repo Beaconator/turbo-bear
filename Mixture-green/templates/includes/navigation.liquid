@@ -1,0 +1,21 @@
+<!--As the name suggests, this is the nav bar for the pages -->
+
+<div class="navbar-header navbar navbar-inverse navbar-fixed-top">
+    <div class="container">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="index">Green Analytics</a>
+        <div class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+                <li {% if mixture.url == "index" %}class="active"{% endif %}><a href="/">Home</a></li>
+                <li {% if mixture.url == "model" %}class="active"{% endif %}><a href="/model">Model</a></li>
+                <!--li {% if mixture.url == "testpage" %}class="active"{% endif %}><a href="/testpage"> Demo</a></li-->
+                <li {% if mixture.url == "port" %} class="active"{% endif %}> <a href="/port"> Demo </a></li>
+                   <li {% if mixture.url == "map" %} class="active"{% endif %}> <a href="/map"> Map </a></li>
+            </ul>
+        </div>
+    </div>
+</div>

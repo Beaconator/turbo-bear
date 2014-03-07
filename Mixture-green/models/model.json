@@ -1,0 +1,21 @@
+{
+  "title": "Model",
+  "modelDate": "March 6 2014",
+  "people": [
+    {
+      "name": "Blue Cush",
+      "twitter": "@neiltak",
+       "price": "$2.96/g"
+    },
+    {
+      "name": "Mike Kus",
+      "twitter": "@mikekus",
+       "price": "$2.96/g"
+    },
+    {
+      "name": "Pete Nelson",
+      "twitter": "@petetak",
+       "price": "$2.96/g"
+    }
+  ]
+}

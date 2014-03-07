@@ -1,0 +1,18 @@
+{
+  "title": "testpage",
+  "modelDate": "11.14.2012",
+  "people": [
+    {
+      "name": "ZACH",
+      "twitter": "@neiltak"
+    },
+    {
+      "name": "Mike Kus",
+      "twitter": "@mikekus"
+    },
+    {
+      "name": "Pete Nelson",
+      "twitter": "@petetak"
+    }
+  ]
+}

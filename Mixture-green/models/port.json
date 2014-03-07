@@ -1,0 +1,47 @@
+{
+  "title": "Demo",
+  "modelDate": "11.14.2012",
+  "club": [
+    {
+      "abb": "ZACH",
+      "des": "@neiltak",
+      "link": "bmes.berkeley.edu",
+      "image": "/public/img/w1.jpeg",
+      "tag": "ac",
+      "price": "$2.96/g",
+       "cat": "warning"
+
+    },
+    {
+      "abb": "Mike Kus",
+      "des": "@mikekus",
+      "link": "bmes.berkeley.edu",
+      "image": "/public/img/w2.jpeg",
+      "tag": "int",
+      "price": "$2.96/g",
+      "cat": "success"
+    },
+    {
+      "abb": "Pete Nelson",
+      "des": "@petetak",
+      "link": "bmes.berkeley.edu",
+      "image": "/public/img/w3.jpeg",
+      "tag": "comp",
+      "price": "$2.96/g",
+       "cat": "info"
+
+    },
+
+    {
+      "abb": "Pete Nelson",
+      "des": "@petetak",
+      "link": "bmes.berkeley.edu",
+      "image": "/public/img/w4.jpeg",
+      "tag": "comp",
+      "price": "$2.96/g",
+       "cat": "warning"
+
+    }
+
+  ]
+}

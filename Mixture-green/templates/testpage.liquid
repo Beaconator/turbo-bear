@@ -1,0 +1,77 @@
+{% block title %}Zach Example : Mixture + Bootstrap{% endblock %}
+{% block content %}
+	<div class="hero-unit">
+		<h1>{{ model.title }}</h1>
+		<h2>Derping around</h2>
+		<p>What am I doing? List populated from the model:</p>
+		<ol>
+			{% for person in model.people %}
+  				<li><a href="http://twitter.com/{{ person.twitter }}">{{ person.name }}</a></li>
+			{% endfor %}
+		</ol>
+		<p>Todays date: {{ 'now' | date: "%d %B %Y" }}. Model created: {{ model.modelDate | date: "%d %B %Y" }}</p>		
+	</div>
+
+	 <div class="span3">
+<form>
+        <field label="Gender">
+          <div class="dropdown">
+          <input value={_page.person.gender} options='[
+            {"text": "(unknown)", "value": null},
+            {"text": "Female"},
+            {"text": "Male"},
+            {"text": "Other"}
+          ]' >
+          </div>
+        </field>
+
+
+  <field label="Gender">
+          <div class="dropdown">
+          <input value={_page.person.gender} options='[
+            {"text": "(unknown)", "value": null},
+            {"text": "Female"},
+            {"text": "Male"},
+            {"text": "Other"}
+          ]' x-bind="click: done" >
+          </div>
+          <div class="submit">
+          <input value="this" autofocus="yes" class="required" >
+          </div>
+  </field>
+ 
+    <p></p>
+    <button class="btn btn-primary" type="submit"> Submit
+    </button>
+   <button class="btn btn-warning" type="cancel">Cancel</button>
+   <button class="btn btn-danger" type="reset">Reset</button>
+  </form>
+</div>
+
+<br>
+<br>
+
+<!-- Bootstrap trigger to open modal -->
+<a data-toggle="modal" href="#rating-modal">Write a Review</a>
+ 
+<div class="hide fade modal" id="rating-modal">
+  <div class="modal-header">
+    <button type="button" class="close" data-dismiss="modal">×</button>
+    <h2>Your Review</h2>
+  </div>
+ 
+  <div class="modal-body">
+    <!-- The async form to send and replace the modals content with its response -->
+    <form class="form-horizontal well" data-async data-target="#rating-modal" action="/some-endpoint" method="POST">
+      <fieldset>
+        <!-- form content -->
+      </fieldset>
+    </form>
+  </div>
+ 
+  <div class="modal-footer">
+    <a href="#" class="btn" data-dismiss="modal">Cancel</a>
+  </div>
+</div>
+
+{% endblock %}
